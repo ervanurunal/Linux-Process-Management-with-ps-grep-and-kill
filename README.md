@@ -1,4 +1,4 @@
-## Linux Process Management with `ps`, `grep`, and `kill`
+## Linux Process Management 
 
 ---
 
@@ -34,8 +34,9 @@ Process management is an important IT Support and Linux administration skill bec
 * Linux / IT Support Hands-On Lab
 
 ---
+---
 
-## 1. List Running Processes With `grep` 
+### 1. List Running Processes With `grep` 
 
 * The `ps` command can be used to display information about running processes.
 
@@ -70,7 +71,7 @@ These are the Process IDs of the two target processes.
 
 ---
 
-## 2. Terminate a Specific Process
+### 2. Terminate a Specific Process
 
 Linux uses the `kill` command to send a signal to a process.
 
@@ -94,7 +95,7 @@ sudo kill [PROCESS_ID]
 
 ---
 
-## 3. Verify the Process Was Terminated
+### 3. Verify the Process Was Terminated
 
 Run the original search again:
 
@@ -108,7 +109,7 @@ After successfully terminating the target processes, the output should only show
 
 ---
 
-## 4. Find Multiple Processes
+### 4. Find Multiple Processes
 
 The lab also contains multiple processes with the word:
 
@@ -128,7 +129,7 @@ Because `grep` searches for the specified text anywhere in the line, it can find
 
 ---
 
-## 5. Terminate Multiple Processes
+### 5. Terminate Multiple Processes
 
 Use the `kill` command for each process ID.
 
@@ -147,7 +148,7 @@ sudo kill 106
 
 ---
 
-## 6. Verify Multiple Processes Were Terminated
+### 6. Verify Multiple Processes Were Terminated
 
 Run:
 
@@ -159,6 +160,7 @@ If the target processes were successfully terminated, you should only see the `g
 
 ![5](https://i.imgur.com/QZjoUgt.png)
 
+---
 ---
 
 ### Commands Learned
@@ -175,22 +177,23 @@ If the target processes were successfully terminated, you should only see the `g
 | `\|`                   | Pipe output from one command into another            |
 
 ---
+---
 
-## Key Concepts
+### Key Concepts
 
-### Process
+#### Process
 
 A **process** is a running instance of a program.
 
 ---
 
-### Process ID (PID)
+#### Process ID (PID)
 
 A **PID** is a unique number assigned to a running process.
 
 ---
 
-### ps
+#### ps
 
 The `ps` command provides information about running processes.
 
@@ -208,7 +211,7 @@ ps -aux
 
 ---
 
-### grep
+#### grep
 
 `grep` searches for text within command output or files.
 
@@ -220,13 +223,13 @@ ps -aux | grep ssh
 
 ---
 
-### Pipe `|`
+#### Pipe `|`
 
 The pipe sends the output of one command to another command.
 
 ---
 
-### kill
+#### kill
 
 The `kill` command sends a signal to a process.
 
@@ -239,8 +242,9 @@ sudo kill 1234
 The PID `1234` identifies the process that receives the signal.
 
 ---
+---
 
-## Cybersecurity Relevance
+### Cybersecurity Relevance
 
 Linux process management is highly relevant to cybersecurity and SOC Analyst work.
 
@@ -271,10 +275,11 @@ to filter the results.
 Understanding processes and PIDs provides a foundation for **Linux endpoint monitoring and incident response**.
 
 ---
+---
 
-## Troubleshooting Notes
+### Troubleshooting Notes
 
-### Too much output from ps
+#### Too much output from ps
 
 Instead of:
 
@@ -292,7 +297,7 @@ This filters the output.
 
 ---
 
-### Process not found
+#### Process not found
 
 Check the process list:
 
@@ -308,7 +313,7 @@ ps -aux | grep keyword
 
 ---
 
-### Permission denied
+#### Permission denied
 
 Try using `sudo`:
 
@@ -318,7 +323,7 @@ sudo kill [PROCESS_ID]
 
 ---
 
-### grep appears in the results
+#### grep appears in the results
 
 This is normal.
 
@@ -332,7 +337,7 @@ This is the `grep` command itself, not the target process.
 
 ---
 
-### Need to find multiple processes
+#### Need to find multiple processes
 
 Use a partial keyword:
 
@@ -344,7 +349,7 @@ ps -aux | grep razzle
 
 ---
 
-###  Process Management Workflow
+####  Process Management Workflow
 
 A basic Linux process-management workflow is:
 
@@ -361,8 +366,9 @@ A basic Linux process-management workflow is:
 ```
 
 ---
+---
 
-## Skills Demonstrated
+### Skills Demonstrated
 
 **Technical Skills**
 
@@ -392,8 +398,9 @@ A basic Linux process-management workflow is:
 * Incident-response fundamentals
 
 ---
+---
 
-## Final Takeaway
+### Final Takeaway
 
 This lab gave me hands-on experience managing **Linux processes from the command line**.
 
